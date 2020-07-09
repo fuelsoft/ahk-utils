@@ -1,10 +1,10 @@
 ; backward
 XButton1::
 If (WinActive("ahk_exe Spotify.exe")) {
-	send ^{Left}
+	send ^{Left} ; ctrl-left is default media back control
 	return
 }
-else {
+else { ; pass button through if Spotify not focused window
 	send {XButton1}
 	return
 }
@@ -13,10 +13,10 @@ else {
 ; forward
 XButton2::
 If (WinActive("ahk_exe Spotify.exe")) {
-	send ^{Right}
+	send ^{Right} ; ctrl-right is default media forward control
 	return
 }
-else {
+else { ; pass button through if Spotify not focused window
 	send {XButton2}
 	return
 }
